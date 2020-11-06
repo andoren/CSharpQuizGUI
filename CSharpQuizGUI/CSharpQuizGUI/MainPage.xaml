@@ -20,7 +20,7 @@
         <Button Grid.Row="2" x:Name="QuizButton2" Margin="0,5,5,5" Text="Kvízek" Clicked="QuizButton_Clicked"></Button>
         <Button Grid.Row="3" x:Name="QuizButton3" Margin="0,5,5,5" Text="Kvízek" Clicked="QuizButton_Clicked"></Button>
         <Button Grid.Row="4" x:Name="QuizButton4" Margin="0,5,5,5" Text="Kvízek" Clicked="QuizButton_Clicked"></Button>
-        <Frame Grid.RowSpan="5" Margin="0,10" HorizontalOptions="Center" VerticalOptions="Center" x:Name="QuizFrame" IsVisible="False" BackgroundColor="#2196F3">
+        <Grid Padding="10" Grid.RowSpan="5" Margin="10" HorizontalOptions="Center" VerticalOptions="Center" x:Name="QuizFrame" IsVisible="False"  BackgroundColor="#2196F3">
             <StackLayout >
                 <Label TextColor="White">Hány darab kérdést tegyünk fel.</Label>
                 <Grid>
@@ -35,7 +35,7 @@
                 <Button BackgroundColor="White" TextColor="#2196F3" x:Name="ChangeToQuizzez" Clicked="ChangeToQuizzez_Clicked" Text="Induljon!"></Button>
             </StackLayout>
 
-        </Frame>
+        </Grid>
     </Grid>
     
 </ContentPage>

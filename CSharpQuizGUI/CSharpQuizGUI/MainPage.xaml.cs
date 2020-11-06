@@ -19,6 +19,7 @@ namespace CSharpQuizGUI
 
         private void QuizButton_Clicked(object sender, EventArgs e)
         {
+         
             QuizFrame.IsVisible = true;
         }
 
