@@ -7,6 +7,7 @@
             <Label Text="Welcome to Quizzeis PAge"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="RawLabel" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" Text="Meow"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

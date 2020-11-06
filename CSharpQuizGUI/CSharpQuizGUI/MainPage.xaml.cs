@@ -25,7 +25,8 @@ namespace CSharpQuizGUI
 
         private void ChangeToQuizzez_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new QuizziesPage());
+            Navigation.PushAsync(new QuizziesPage(((int)RandomQuizNumber.Value)));
+            QuizFrame.IsVisible = false;
         }
 
         private void RandomQuizNumber_ValueChanged(object sender, ValueChangedEventArgs e)
