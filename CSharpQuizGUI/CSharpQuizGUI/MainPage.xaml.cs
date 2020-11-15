@@ -24,7 +24,7 @@ namespace CSharpQuizGUI
          
            
           
-            await WaitMs(200);
+            await WaitMs(150);
             QuizFrame.IsVisible = true;
             ContainerGrid.RaiseChild(QuizFrame);
         }

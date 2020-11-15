@@ -11,14 +11,19 @@
                     <Label x:Name="CurrentQuestionStatus" VerticalOptions="Center" Text="0/50" FontSize="30" TextColor="White"></Label>
                     </StackLayout>
                     <Grid >
-                        <Button HorizontalOptions="Start" Text="Előző" ></Button>
-                        <Button HorizontalOptions="End"  Text="Következő"></Button>
+                        <Button  x:Name="PrevButton" Clicked="PrevButton_Clicked" IsVisible="False" HorizontalOptions="Start" Text="Előző" ></Button>
+                        <Button x:Name="NextButton" Clicked="NextButton_Clicked" HorizontalOptions="End"  Text="Következő"></Button>
 
                     </Grid>
                 </StackLayout>
                 
             </Frame>
-            
+            <Label x:Name="QuizQuestionLabel" Padding="10" FontSize="Large" Text="Kérdés"></Label>
+            <Label FontSize="Medium" Padding="10" Text="Lehetséges válaszok:"></Label>
+            <StackLayout x:Name="Answers">
+   
+         
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

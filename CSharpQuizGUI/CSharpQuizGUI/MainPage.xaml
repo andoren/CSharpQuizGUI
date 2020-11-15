@@ -17,12 +17,12 @@
         <Frame  BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Üdvözöllek a CSharp Kvíz játékban." HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        
-        <Button Grid.Row="1" Margin="5" x:Name="LearButton"  Text="Tanulás" Clicked="LearButton_Clicked" ></Button>
-        <Button  Grid.Row="2" Margin="5,0,5,0" x:Name="QuizButton"  Text="Kvíz" Clicked="QuizButton_Clicked" ></Button>
-        <Button Grid.Row="3" Margin="5,0,5,0" x:Name="Scorebutton" Text="Pontszámom" Clicked="Scorebutton_Clicked"></Button>
-        <Button Grid.Row="4" Margin="5,0,5,10" x:Name="ExitButton"  Text="Kilépés" Clicked="ExitButton_Clicked" ></Button>
-        <AbsoluteLayout WidthRequest="400" BackgroundColor="#2196F3"  Padding="20" Grid.RowSpan="5" Margin="10" HorizontalOptions="Center" VerticalOptions="Center" x:Name="QuizFrame" IsVisible="True" >
+
+        <Button BackgroundColor="#2196F3"  FontSize="24" TextColor="White" CornerRadius="20" Grid.Row="1" Margin="10,5" x:Name="LearButton"   Clicked="LearButton_Clicked" Text="Tanulás"  ImageSource="book.png" />
+        <Button BackgroundColor="#2196F3" FontSize="24" TextColor="White" CornerRadius="20" Grid.Row="2" Margin="10,5" x:Name="QuizButton"  Text="Kvíz" Clicked="QuizButton_Clicked" ></Button>
+        <Button BackgroundColor="#2196F3" FontSize="24" TextColor="White" CornerRadius="20" Grid.Row="3" Margin="10,5" x:Name="Scorebutton" Text="Pontszámom" Clicked="Scorebutton_Clicked"></Button>
+        <Button BackgroundColor="#2196F3" FontSize="24" TextColor="White" CornerRadius="20" Grid.Row="4" Margin="10,5,10,10" x:Name="ExitButton"  Text="Kilépés" Clicked="ExitButton_Clicked" ></Button>
+        <Frame WidthRequest="400" BackgroundColor="#2196F3"  Padding="20" Grid.RowSpan="5" Margin="10" HorizontalOptions="Center" VerticalOptions="Center" x:Name="QuizFrame" IsVisible="False" HasShadow="True" CornerRadius="10"  BorderColor="Gray" >
             <StackLayout  >
                 <Label  Margin="0,0,0,10" TextColor="White">Kérdések száma:</Label>
                 <Grid Margin="0,0,0,10">
@@ -36,7 +36,7 @@
 
                 <Button BackgroundColor="White" TextColor="#2196F3" x:Name="ChangeToQuizzez" Clicked="ChangeToQuizzez_Clicked" Text="Induljon!"></Button>
             </StackLayout>
-        </AbsoluteLayout>
+        </Frame>
     </Grid>
     
 </ContentPage>
