@@ -25,7 +25,7 @@ namespace CSharpQuizGUI
             service = new QuizService();
             getQuizzes();
         }
-        string rawData;
+        ObservableCollection<Quiz> quizItems;
         private int _quizCount;
 
         public int QuizCount
@@ -34,8 +34,13 @@ namespace CSharpQuizGUI
             set { _quizCount = value; }
         }
         public async void getQuizzes() {
-            List<Quiz> items =  await service.GetQuizzesAsync(QuizCount);
-            RawLabel.Text = items.Count.ToString();
+           quizItems =  new ObservableCollection<Quiz>(await service.GetQuizzesAsync(QuizCount));
+            ChangeCurrentQuestionStatus(1,quizItems.Count);
         }
+
+        private void ChangeCurrentQuestionStatus(int current, int max) {
+            CurrentQuestionStatus.Text = $"{current}/{max}";
+        }
+
     }
 }

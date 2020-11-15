@@ -3,11 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CSharpQuizGUI.QuizziesPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Quizzeis PAge"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label x:Name="RawLabel" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" Text="Meow"/>
+        <StackLayout Orientation="Vertical">
+            <Frame BackgroundColor="#2196F3" Padding="24"  CornerRadius="0">
+                <StackLayout  Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                    <Label VerticalOptions="Center" TextColor="White" FontSize="30">Kérdés:</Label>
+                    <Label x:Name="CurrentQuestionStatus" VerticalOptions="Center" Text="0/50" FontSize="30" TextColor="White"></Label>
+                    </StackLayout>
+                    <Grid >
+                        <Button HorizontalOptions="Start" Text="Előző" ></Button>
+                        <Button HorizontalOptions="End"  Text="Következő"></Button>
+
+                    </Grid>
+                </StackLayout>
+                
+            </Frame>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
