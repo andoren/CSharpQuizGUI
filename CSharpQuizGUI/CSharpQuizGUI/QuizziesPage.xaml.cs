@@ -53,23 +53,16 @@ namespace CSharpQuizGUI
             CurrentQuestionStatus.Text = $"{current}/{max}";
         }
 
-        private void Frame_Focused(object sender, FocusEventArgs e)
-        {
-            e.VisualElement.BackgroundColor = Color.CadetBlue;
-        }
-
-        private void Frame_Unfocused(object sender, FocusEventArgs e)
-        {
-            e.VisualElement.BackgroundColor = Color.White;
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
+ 
+        private void FrameClicked(object sender, EventArgs e)
         {
             foreach (var frame in AnswerFrames)
             {
                 frame.BackgroundColor = Color.White;
             }
             ((sender as Button).Parent as Frame).BackgroundColor = Color.CadetBlue;
+     
+          
         }
         private void ChangeQuestion(Quiz quiz) {
             Answers.Children.Clear();
@@ -93,25 +86,31 @@ namespace CSharpQuizGUI
                 frame.Margin = new Thickness(10);
                 var tapGestureRecognizer = new TapGestureRecognizer();
                 tapGestureRecognizer.Tapped += (s, e) => {
-                    foreach (var f in Answers.Children)
+                    for(int j = 0; j<Answers.Children.Count;j++) 
                     {
-                        f.BackgroundColor = Color.White;
+                        if (Answers.Children[j] == (s as Frame)) 
+                        {
+                            (s as Frame).BackgroundColor = Color.CadetBlue; 
+                            quizItems[CurrentIndex].Useranswer = j; 
+                        }
+                        else
+                            Answers.Children[j].BackgroundColor = Color.White;
 
                     }
-                     (s as Frame).BackgroundColor = Color.CadetBlue;
+                     
+         
                 };
 
                 frame.GestureRecognizers.Add(tapGestureRecognizer);
                 
                 Answers.Children.Add(frame);
+             
             }
-            
+            if (quiz.Useranswer != null)
+            {
+                Answers.Children[(int)quiz.Useranswer].BackgroundColor = Color.CadetBlue;
+            }
         }
-        void OnTapGestureRecognizerTapped(object sender, EventArgs e)
-        {
-      
-        }
-
         private void NextButton_Clicked(object sender, EventArgs e)
         {
             ChangeQuestion(quizItems[++CurrentIndex]);

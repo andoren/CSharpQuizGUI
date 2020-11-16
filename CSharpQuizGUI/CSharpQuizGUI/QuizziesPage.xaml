@@ -11,8 +11,8 @@
                     <Label x:Name="CurrentQuestionStatus" VerticalOptions="Center" Text="0/50" FontSize="30" TextColor="White"></Label>
                     </StackLayout>
                     <Grid >
-                        <Button  x:Name="PrevButton" Clicked="PrevButton_Clicked" IsVisible="False" HorizontalOptions="Start" Text="Előző" ></Button>
-                        <Button x:Name="NextButton" Clicked="NextButton_Clicked" HorizontalOptions="End"  Text="Következő"></Button>
+                        <Button BorderColor="LightGray" TextColor="Black" BorderWidth="1"  CornerRadius="10" Padding="10" BackgroundColor="White" x:Name="PrevButton" Clicked="PrevButton_Clicked" IsVisible="True" HorizontalOptions="Start" Text="Előző" ></Button>
+                        <Button BorderColor="LightGray" TextColor="Black" BorderWidth="1"  CornerRadius="10" Padding="10" BackgroundColor="White" x:Name="NextButton" Clicked="NextButton_Clicked" HorizontalOptions="End"  Text="Következő"></Button>
 
                     </Grid>
                 </StackLayout>

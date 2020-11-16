@@ -11,7 +11,7 @@ namespace CSharpQuizGUI.Models
         string _explanation;
         string[] _answers;
         string _correctAnswer;
-
+        int? _userAnswer = null;
         public Quiz(int id, string question, string explanation, string[] answers, string correctAnswer)
         {
             _question = question ?? throw new ArgumentNullException(nameof(question));
@@ -21,7 +21,13 @@ namespace CSharpQuizGUI.Models
             _correctAnswer = correctAnswer ?? throw new ArgumentNullException(nameof(correctAnswer));
         }
 
-
+        public int? Useranswer { get {
+                return _userAnswer;
+            }
+            set {
+                _userAnswer = value;
+            }
+        }
         public int Id
         {
             get { return _id; }
